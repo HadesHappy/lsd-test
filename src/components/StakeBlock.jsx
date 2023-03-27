@@ -55,7 +55,7 @@ const StakeBlock = ({data, setIsModalVisible, setCurrentWindow}) => {
             <span>LSD Earned</span>
           </p>
           <b>{data.lsdEarned}</b>
-          <button className='turquoise'>Calm</button>
+          <button className='turquoise'>Claim</button>
         </li>
       </ul>
       <ul className='stake-block__info'>

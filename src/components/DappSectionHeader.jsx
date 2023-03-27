@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
-import DappSettingsWindow from './DappSettingsWindow';
-import ModalWindow from './ModalWindow';
+import { STAKE_ETH_TYPE, ETH_INPUT_CHANGE, ETH_OUTPUT_CHANGE } from '../store/constants'
+import { useDispatch } from 'react-redux'
 
-const DappSectionHeader = ({setIsModalVisible, setCurrentModal}) => {
-
-  const tabs = ['Stake', 'Unstake'];
-  const [activeTab, setActiveTab] = useState('Stake');
+const DappSectionHeader = ({ setIsModalVisible, setCurrentModal }) => {
+  const dispatch = useDispatch()
+  const tabs = ['Stake', 'Unstake']
+  const [activeTab, setActiveTab] = useState('Stake')
 
   const handleTabClick = (tab) => {
     setActiveTab(tab)
-
+    dispatch({ type: STAKE_ETH_TYPE, payload: tab })
+    dispatch({ type: ETH_INPUT_CHANGE, payload: 0 })
+    dispatch({ type: ETH_OUTPUT_CHANGE, payload: 0 })
   }
 
   return (
