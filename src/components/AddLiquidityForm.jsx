@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useAddress, useSigner } from '@thirdweb-dev/react'
 
-const AddLiquidityForm = ({setIsModalVisible}) => {
+const AddLiquidityForm = ({ setIsModalVisible }) => {
+
   return (
     <form className='stake-window__form'>
       <div className='stake-window__form-wrapper'>

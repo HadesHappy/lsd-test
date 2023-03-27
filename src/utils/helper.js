@@ -1,3 +1,13 @@
+import { ethers } from "ethers"
+
+const formatEther = (amount) => {
+  return Number(ethers.utils.formatEther(amount.toString()))
+}
+
+const parseEther = (amount) => {
+  return Number(ethers.utils.parseEther(amount.toString()))
+}
+
 const showAddress = (address) => {
   if (address)
     return address.slice(0, 5) + '...' + address.slice(-4)
@@ -38,5 +48,7 @@ const showRate = (rate) => {
 export {
   showAddress,
   showBalance,
-  showRate
+  showRate,
+  formatEther,
+  parseEther
 }

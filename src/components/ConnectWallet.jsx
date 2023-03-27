@@ -3,6 +3,7 @@ import MyWallet from './MyWallet'
 import { toast } from 'react-hot-toast'
 import { useMetamask, useCoinbaseWallet, useWalletConnect, useAddress, useDisconnect } from '@thirdweb-dev/react'
 import { showAddress } from '../utils/helper'
+import { useSigner } from '@thirdweb-dev/react'
 
 const ConnectWallet = ({ setIsWalletWindowVisible }) => {
   const connectWithMetamask = useMetamask()
@@ -10,6 +11,7 @@ const ConnectWallet = ({ setIsWalletWindowVisible }) => {
   const conneectWithWalletConnect = useWalletConnect()
   const address = useAddress()
   const disconnect = useDisconnect()
+  const signer = useSigner()
 
   const [isWalletLoading, setIsWalletLoading] = useState(false)
 
