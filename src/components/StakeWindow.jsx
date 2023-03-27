@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const StakeWindow = ({setIsModalVisible}) => {
+const StakeWindow = ({ setIsModalVisible }) => {
 
   const tabs = ['Stake', 'Unstake'];
   const [activeTab, setActiveTab] = useState('Stake');
@@ -11,7 +11,7 @@ const StakeWindow = ({setIsModalVisible}) => {
         <h2 className='stake-window__title'>Stake LSD</h2>
         <button className='stake-window__close' onClick={() => setIsModalVisible(false)}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 6L6 18M6 6L18 18" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       </header>

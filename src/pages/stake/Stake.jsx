@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
-import LiquidityWindow from '../../components/LiquidityWindow';
-import DappFooter from '../../components/DappFooter';
-import ModalWindow from '../../components/ModalWindow';
-import StakeBlock from '../../components/StakeBlock';
-import StakeWindow from '../../components/StakeWindow';
+import LiquidityWindow from '../../components/LiquidityWindow'
+import DappFooter from '../../components/DappFooter'
+import ModalWindow from '../../components/ModalWindow'
+import StakeBlock from '../../components/StakeBlock'
+import StakeWindow from '../../components/StakeWindow'
 import './stake.css'
+import { showBalance } from '../../utils/helper'
+import { useStakeEthInfo } from '../../hooks/useStakeEthInfo'
 
 const Stake = () => {
+  const { totalEth } = useStakeEthInfo()
 
   const leftData = {
     img: ['img/coins/lseth.png'],
@@ -51,7 +54,7 @@ const Stake = () => {
         <section className='dapp-section'>
           <h1 className="dapp-section__title">
             <span>Stake coins</span>
-            141,496
+            {showBalance(totalEth)}
           </h1>
           <p className="dapp-section__about">ETH staked</p>
         </section>

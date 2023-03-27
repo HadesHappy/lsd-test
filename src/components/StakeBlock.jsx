@@ -12,7 +12,7 @@ const StakeBlock = ({data, setIsModalVisible, setCurrentWindow}) => {
             <i>{data.coinName}</i>
           </>
           :
-          <>
+          <> 
             {
               data.img.map((item) => <img src={item} key={item} />)
             }
@@ -71,7 +71,7 @@ const StakeBlock = ({data, setIsModalVisible, setCurrentWindow}) => {
         <li className='stake-block__info-item'>
           <span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_370_370)">
+              <g clipPath="url(#clip0_370_370)">
                 <path d="M8.41686 3.33335C9.46898 2.30236 10.9099 1.66669 12.4993 1.66669C15.721 1.66669 18.3327 4.27836 18.3327 7.50002C18.3327 9.08947 17.697 10.5304 16.666 11.5826M6.24935 10.8334L7.49935 10V14.5834M6.24935 14.5834H8.74935M13.3327 12.5C13.3327 15.7217 10.721 18.3334 7.49935 18.3334C4.27769 18.3334 1.66602 15.7217 1.66602 12.5C1.66602 9.27836 4.27769 6.66669 7.49935 6.66669C10.721 6.66669 13.3327 9.27836 13.3327 12.5Z" stroke="#AFAFAF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </g>
               <defs>
@@ -87,8 +87,8 @@ const StakeBlock = ({data, setIsModalVisible, setCurrentWindow}) => {
         <li className='stake-block__info-item'>
           <span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_370_386)">
-                <path d="M8.41686 3.33335C9.46898 2.30236 10.9099 1.66669 12.4993 1.66669C15.721 1.66669 18.3327 4.27836 18.3327 7.50002C18.3327 9.08947 17.697 10.5304 16.666 11.5826M6.24935 10.8334L7.49935 10V14.5834M6.24935 14.5834H8.74935M13.3327 12.5C13.3327 15.7217 10.721 18.3334 7.49935 18.3334C4.27769 18.3334 1.66602 15.7217 1.66602 12.5C1.66602 9.27836 4.27769 6.66669 7.49935 6.66669C10.721 6.66669 13.3327 9.27836 13.3327 12.5Z" stroke="#AFAFAF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <g clipPath="url(#clip0_370_386)">
+                <path d="M8.41686 3.33335C9.46898 2.30236 10.9099 1.66669 12.4993 1.66669C15.721 1.66669 18.3327 4.27836 18.3327 7.50002C18.3327 9.08947 17.697 10.5304 16.666 11.5826M6.24935 10.8334L7.49935 10V14.5834M6.24935 14.5834H8.74935M13.3327 12.5C13.3327 15.7217 10.721 18.3334 7.49935 18.3334C4.27769 18.3334 1.66602 15.7217 1.66602 12.5C1.66602 9.27836 4.27769 6.66669 7.49935 6.66669C10.721 6.66669 13.3327 9.27836 13.3327 12.5Z" stroke="#AFAFAF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </g>
               <defs>
                 <clipPath id="clip0_370_386">

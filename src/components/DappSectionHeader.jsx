@@ -7,16 +7,21 @@ const DappSectionHeader = ({setIsModalVisible, setCurrentModal}) => {
   const tabs = ['Stake', 'Unstake'];
   const [activeTab, setActiveTab] = useState('Stake');
 
+  const handleTabClick = (tab) => {
+    setActiveTab(tab)
+
+  }
+
   return (
     <header className="dapp-section__header">
       <ul className={`dapp-section__tabs ${activeTab === 'Unstake' && 'dapp-section__tabs--unstake'}`}>
         {
           tabs.map((tab) => {
-            return <li className={`dapp-section__tab ${activeTab === tab && 'active'}`} key={tab} onClick={() => setActiveTab(tab)}>{tab}</li>
+            return <li className={`dapp-section__tab ${activeTab === tab && 'active'}`} key={tab} onClick={() => handleTabClick(tab)}>{tab}</li>
           })
         }
       </ul>
-      <div className="dapp-section__settings">
+      {/* <div className="dapp-section__settings">
         <button
           className="dapp-section__settings-btn"
           onClick={() => {
@@ -29,7 +34,7 @@ const DappSectionHeader = ({setIsModalVisible, setCurrentModal}) => {
             <path d="M11.9999 15C13.6568 15 14.9999 13.6569 14.9999 12C14.9999 10.3431 13.6568 9 11.9999 9C10.3431 9 8.99992 10.3431 8.99992 12C8.99992 13.6569 10.3431 15 11.9999 15Z" stroke="#AFAFAF" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
-      </div>
+      </div> */}
     </header>
   )
 }
